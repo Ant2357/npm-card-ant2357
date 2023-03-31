@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "ant2357",
+  "version": "2.0.3",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "ant2357": "./bin/card.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "boxen": "^7.0.2",
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0"
+  }
+}
