@@ -51,4 +51,4 @@ const samuraiAa = [
   "\"\"\"~\"\"\"\"\"\"~\"\"\"~\"\"\"~\""
 ].join(newline);
 
-console.log(`${boxen(output, options)}${samuraiAa}`);
+console.log(`${boxen(output, options)}\n${samuraiAa}`);
