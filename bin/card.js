@@ -42,4 +42,13 @@ const output = [
   carding,
 ].join(newline);
 
-console.log(boxen(output, options));
+const samuraiAa = [
+  "　　　　∧__∧",
+  "　　　 （｀･ω･）< I'm from Japan",
+  "　　　.ノ^　yヽ、",
+  "　　　ヽ,,ﾉ==l ﾉ",
+  "　　　　/ 　l |",
+  "\"\"\"~\"\"\"\"\"\"~\"\"\"~\"\"\"~\""
+].join(newline);
+
+console.log(`${boxen(output, options)}${samuraiAa}`);
