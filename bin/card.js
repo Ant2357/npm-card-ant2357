@@ -4,6 +4,7 @@
 
 import chalk from 'chalk'
 import boxen from 'boxen'
+import cfonts from 'cfonts'
 
 const options = {
   padding: 1,
@@ -51,4 +52,9 @@ const samuraiAa = [
   "\"\"\"~\"\"\"\"\"\"~\"\"\"~\"\"\"~\""
 ].join(newline);
 
-console.log(`${boxen(output, options)}\n${samuraiAa}`);
+cfonts.say("I Love npm", {
+  gradient: "yellow,#55ff55", 
+  space: false
+});
+console.log(boxen(output, options));
+console.log(samuraiAa);

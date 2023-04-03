@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "boxen": "^7.0.2",
+    "cfonts": "^3.1.1",
     "chalk": "^5.2.0",
     "commander": "^10.0.0"
   }
