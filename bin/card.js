@@ -2,6 +2,7 @@
 // 参考記事
 // https://www.npmjs.com/package/glaucia_lemos86
 
+import inquirer from 'inquirer'
 import chalk from 'chalk'
 import boxen from 'boxen'
 import cfonts from 'cfonts'
@@ -45,16 +46,60 @@ const output = [
 
 const samuraiAa = [
   "　　　　∧__∧",
-  "　　　 （｀･ω･）< I'm from Japan",
+  "　　　 （｀･ω･）< text",
   "　　　.ノ^　yヽ、",
   "　　　ヽ,,ﾉ==l ﾉ",
   "　　　　/ 　l |",
   "\"\"\"~\"\"\"\"\"\"~\"\"\"~\"\"\"~\""
 ].join(newline);
 
-cfonts.say("I Love npm", {
-  gradient: "yellow,#55ff55", 
-  space: false
-});
-console.log(boxen(output, options));
-console.log(samuraiAa);
+async function main() {
+  cfonts.say("I Love npm", {
+    gradient: "yellow,#55ff55", 
+    space: false
+  });
+
+  console.log(boxen(output, options));
+  console.log(samuraiAa.replaceAll("text", "Hi"));
+  while (true) {
+
+    const questions = [
+      "Where are you from?",
+      "May I ask your age?",
+      "What do you do in your free time?",
+    ];
+    const questionExit = "Exit";
+
+    const responses = await inquirer.prompt([{
+      name: "name",
+      message: "Select a text",
+      type: "list",
+      choices: [
+        { name: questions[0] },
+        { name: questions[1] },
+        { name: questions[2] },
+        { name: questionExit}
+    ]}]);
+
+    console.log(boxen(output, options));
+    switch (responses.name) {
+      case questions[0]:
+        console.log(samuraiAa.replaceAll("text", "I'm from Japan"));
+        break;
+      case questions[1]:
+        console.log(samuraiAa.replaceAll("text", "I plead the fifth"));
+        break;
+      case questions[2]:
+        console.log(samuraiAa.replaceAll("text", "In my free time, I like to programming"));
+        break;
+      case questionExit:
+        console.log(samuraiAa.replaceAll("text", "Bye"));
+        return;
+      default:
+        console.log(samuraiAa.replaceAll("text", "Bye"));
+        return;
+    }
+
+  }
+}
+main();
