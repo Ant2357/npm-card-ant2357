@@ -67,22 +67,24 @@ async function main() {
       "Where are you from?",
       "May I ask your age?",
       "What do you do in your free time?",
+      "Which do you like, Vim or Emacs"
     ];
     const questionExit = "Exit";
 
     const responses = await inquirer.prompt([{
-      name: "name",
-      message: "Select a text",
+      name: "select",
+      message: "Choose a text",
       type: "list",
       choices: [
         { name: questions[0] },
         { name: questions[1] },
         { name: questions[2] },
+        { name: questions[3] },
         { name: questionExit}
     ]}]);
 
     console.log(boxen(output, options));
-    switch (responses.name) {
+    switch (responses.select) {
       case questions[0]:
         console.log(samuraiAa.replaceAll("text", "I'm from Japan"));
         break;
@@ -91,6 +93,9 @@ async function main() {
         break;
       case questions[2]:
         console.log(samuraiAa.replaceAll("text", "In my free time, I like to programming"));
+        break;
+      case questions[3]:
+        console.log(samuraiAa.replaceAll("text", "Vim"));
         break;
       case questionExit:
         console.log(samuraiAa.replaceAll("text", "Bye"));
