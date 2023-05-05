@@ -6,8 +6,12 @@ import inquirer from 'inquirer'
 import chalk from 'chalk'
 import boxen from 'boxen'
 import cfonts from 'cfonts'
+import { oraPromise } from 'ora'
 
 import terminalImage from 'terminal-image'
+import got from 'got'
+
+const imageAnt2357Url = "https://raw.githubusercontent.com/Ant2357/npm-card-ant2357/main/assets/images/ant2357.jpg";
 
 const options = {
   padding: 1,
@@ -84,7 +88,7 @@ async function main() {
         { name: questions[2] },
         { name: questions[3] },
         { name: questions[4] },
-        { name: questionExit}
+        { name: questionExit }
     ]}]);
 
     console.log(boxen(output, options));
@@ -102,7 +106,8 @@ async function main() {
         console.log(samuraiAa.replaceAll("text", "Vim"));
         break;
       case questions[4]:
-        console.log(await terminalImage.file("./assets/images/ant2357.jpg"));
+        const body = await oraPromise(got(imageAnt2357Url).buffer());
+        console.log(await terminalImage.buffer(body));
         console.log(samuraiAa.replaceAll("text", "OK"));
         break;
       case questionExit:
