@@ -7,6 +7,8 @@ import chalk from 'chalk'
 import boxen from 'boxen'
 import cfonts from 'cfonts'
 
+import terminalImage from 'terminal-image'
+
 const options = {
   padding: 1,
   margin: 1,
@@ -67,7 +69,8 @@ async function main() {
       "Where are you from?",
       "May I ask your age?",
       "What do you do in your free time?",
-      "Which do you like, Vim or Emacs"
+      "Which do you like, Vim or Emacs",
+      "Can I have a picture of you?"
     ];
     const questionExit = "Exit";
 
@@ -80,6 +83,7 @@ async function main() {
         { name: questions[1] },
         { name: questions[2] },
         { name: questions[3] },
+        { name: questions[4] },
         { name: questionExit}
     ]}]);
 
@@ -96,6 +100,10 @@ async function main() {
         break;
       case questions[3]:
         console.log(samuraiAa.replaceAll("text", "Vim"));
+        break;
+      case questions[4]:
+        console.log(await terminalImage.file("./assets/images/ant2357.jpg"));
+        console.log(samuraiAa.replaceAll("text", "OK"));
         break;
       case questionExit:
         console.log(samuraiAa.replaceAll("text", "Bye"));

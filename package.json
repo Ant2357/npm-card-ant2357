@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "ant2357",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -21,6 +21,7 @@
     "cfonts": "^3.1.1",
     "chalk": "^5.2.0",
     "commander": "^10.0.0",
-    "inquirer": "^9.1.5"
+    "inquirer": "^9.1.5",
+    "terminal-image": "^2.0.0"
   }
 }
