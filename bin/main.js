@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import cfonts from 'cfonts'
 
 import { profileCard } from './profileCard.js'
