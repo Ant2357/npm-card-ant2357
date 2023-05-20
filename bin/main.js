@@ -3,53 +3,17 @@
 // https://www.npmjs.com/package/glaucia_lemos86
 
 import inquirer from 'inquirer'
-import chalk from 'chalk'
-import boxen from 'boxen'
 import cfonts from 'cfonts'
 import { oraPromise } from 'ora'
 
 import terminalImage from 'terminal-image'
 import got from 'got'
 
+import { profileCard } from './profileCard.js'
+
 const imageAnt2357Url = "https://raw.githubusercontent.com/Ant2357/npm-card-ant2357/main/assets/images/ant2357.jpg";
 
-const options = {
-  padding: 1,
-  margin: 1,
-  borderStyle: 'classic',
-  borderColor: 'white'
-}
-
-const data = {
-  name: chalk.white('Ant2357 /'),
-  handle: chalk.cyan('ant2357'),
-  twitter: chalk.cyan('https://twitter.com/ant2357'),
-  github: chalk.cyan('https://github.com/Ant2357'),
-  gmail: chalk.cyan('ryu4979@gmail.com'),
-  npx: chalk.white('npx ant2357'),
-  labelTwitter: chalk.white.bold('   Twitter:'),
-  labelGitHub: chalk.white.bold('    GitHub:'),
-  labelGmail: chalk.white.bold('     Gmail:'),
-  labelCard: chalk.white.bold('      Card:')
-}
-
 const newline = '\n';
-const heading = `${data.name} ${data.handle}`;
-const twittering = `${data.labelTwitter}  ${data.twitter}`;
-const githubing = `${data.labelGitHub}  ${data.github}`;
-const gmailing = `${data.labelGmail}  ${data.gmail}`;
-const carding = `${data.labelCard}  ${data.npx}`;
-
-const output = [
-  heading,
-  newline,
-  twittering,
-  githubing,
-  gmailing,
-  newline,
-  carding,
-].join(newline);
-
 const samuraiAa = [
   "　　　　∧__∧",
   "　　　 （｀･ω･）< text",
@@ -65,7 +29,7 @@ async function main() {
     space: false
   });
 
-  console.log(boxen(output, options));
+  console.log(profileCard);
   console.log(samuraiAa.replaceAll("text", "Hi"));
   while (true) {
 
@@ -91,7 +55,7 @@ async function main() {
         { name: questionExit }
     ]}]);
 
-    console.log(boxen(output, options));
+    console.log(profileCard);
     switch (responses.select) {
       case questions[0]:
         console.log(samuraiAa.replaceAll("text", "I'm from Japan"));

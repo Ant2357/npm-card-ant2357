@@ -1,11 +1,11 @@
 {
   "type": "module",
   "name": "ant2357",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "",
   "main": "index.js",
   "bin": {
-    "ant2357": "./bin/card.js"
+    "ant2357": "./bin/main.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
