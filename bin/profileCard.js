@@ -1,3 +1,7 @@
+#!/usr/bin/env node
+// 参考記事
+// https://www.npmjs.com/package/glaucia_lemos86
+
 import chalk from 'chalk'
 import boxen from 'boxen'
 
