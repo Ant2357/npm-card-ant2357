@@ -9,7 +9,8 @@ import { samuraiAa } from './aas/samuraiAA.js'
 async function main() {
   cfonts.say("I Love npm", {
     gradient: "yellow,#55ff55", 
-    space: false
+    space: false,
+    align: 'center'
   });
 
   console.log(profileCard);

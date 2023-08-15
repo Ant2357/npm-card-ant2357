@@ -16,12 +16,10 @@ const data = {
   name: chalk.white('Ant2357 /'),
   handle: chalk.cyan('ant2357'),
   twitter: chalk.cyan('https://twitter.com/ant2357'),
-  threads: chalk.cyan('https://www.threads.net/@ant2357a'),
   github: chalk.cyan('https://github.com/Ant2357'),
   gmail: chalk.cyan('ryu4979@gmail.com'),
   npx: chalk.white('npx ant2357'),
   labelTwitter: chalk.white.bold('   Twitter:'),
-  labelThreads: chalk.white.bold('   Threads:'),
   labelGitHub: chalk.white.bold('    GitHub:'),
   labelGmail: chalk.white.bold('     Gmail:'),
   labelCard: chalk.white.bold('      Card:')
@@ -30,7 +28,6 @@ const data = {
 const newline = '\n';
 const heading = `${data.name} ${data.handle}`;
 const twittering = `${data.labelTwitter}  ${data.twitter}`;
-const threadsing = `${data.labelThreads}  ${data.threads}`;
 const githubing = `${data.labelGitHub}  ${data.github}`;
 const gmailing = `${data.labelGmail}  ${data.gmail}`;
 const carding = `${data.labelCard}  ${data.npx}`;
@@ -39,7 +36,6 @@ const output = [
   heading,
   newline,
   twittering,
-  threadsing,
   githubing,
   gmailing,
   newline,
