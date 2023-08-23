@@ -5,3 +5,6 @@ npm の電子名刺
 ```
 npx ant2357
 ```
+
+## Output
+![CLI画面](assets/images/screen.png "CLI画面")
